@@ -9,6 +9,7 @@ import { LiaBookSolid } from "react-icons/lia";
 import { RxDashboard, RxPerson } from "react-icons/rx";
 import { TbSettings2 } from "react-icons/tb";
 import { TfiHelpAlt } from "react-icons/tfi";
+import { GoOrganization } from "react-icons/go";
 
 export default function layout({ children }) {
   // redirect("./auth/login", "replace");
@@ -16,7 +17,7 @@ export default function layout({ children }) {
 
   return (
     <main className="flex">
-      <div className="bg-zinc-100 min-h-screen flex flex-col text-sm justify-between w-2/12 py-14">
+      <div className="bg-zinc-100 min-h-screen flex flex-col text-sm justify-between w-2/12 py-14 pb-8">
         <div>
           <div className="pl-14 flex items-center gap-4 mb-8">
             <Image
@@ -88,6 +89,21 @@ export default function layout({ children }) {
               >
                 <IoBookOutline />
                 Borrow book
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/publisher"
+                className={clsx(
+                  "flex items-center gap-2 p-3 rounded-l-sm transition duration-300 text-gray-600 bg-blue-600/0",
+                  {
+                    "bg-blue-600/100 text-white":
+                      path === "/dashboard/publisher",
+                  }
+                )}
+              >
+                <GoOrganization />
+                Publisher
               </Link>
             </li>
           </ul>
