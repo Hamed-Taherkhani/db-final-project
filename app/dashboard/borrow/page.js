@@ -36,7 +36,6 @@ export default function Borrow() {
           </h1>
           <div className="mb-10">
             <Table
-              title="Members"
               headList={borrow.head}
               dataList={borrow.data}
               method="/api/borrow/delete"

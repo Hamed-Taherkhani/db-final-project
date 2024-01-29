@@ -32,7 +32,6 @@ export default function Books() {
           </h1>
           <div className="mb-10">
             <Table
-              title="Members"
               headList={[
                 "ID",
                 "Name",
@@ -67,7 +66,7 @@ export default function Books() {
             />
             <button
               type="submit"
-              className="bg-green-500 p-3 text-white rounded-sm"
+              className="bg-blue-600 p-3 text-white rounded-sm"
             >
               Add member
             </button>

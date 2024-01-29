@@ -5,8 +5,6 @@ import Table from "@/app/ui/Table";
 import { useEffect, useState } from "react";
 
 export default function Books() {
-  // const booksHead = Object.keys(books[0]);
-  // const booksData = books.map((obj) => Object.values(obj));
   const [books, setBooks] = useState({
     head: [],
     data: [],
@@ -40,7 +38,6 @@ export default function Books() {
             Books
           </h1>
           <Table
-            title="Books"
             headList={books.head}
             dataList={books.data}
             method="/api/books/delete"
@@ -83,7 +80,7 @@ export default function Books() {
             />
             <button
               type="submit"
-              className="bg-green-500 p-3 text-white rounded-sm"
+              className="bg-blue-600 p-3 text-white rounded-sm"
             >
               Add book
             </button>
