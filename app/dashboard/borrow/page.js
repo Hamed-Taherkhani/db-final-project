@@ -30,7 +30,7 @@ export default function Borrow() {
   return (
     <div>
       <div className="flex">
-        <div className="w-8/12 m-14">
+        <div className="w-8/12 m-8 my-14">
           <h1 className="text-4xl font-bold antialiased text-slate-800 mb-6">
             Borrow
           </h1>

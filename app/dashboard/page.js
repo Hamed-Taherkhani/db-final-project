@@ -51,7 +51,7 @@ export default function page() {
 
   return (
     <div className="flex">
-      <div className="m-14 w-8/12">
+      <div className="m-8 my-14 w-8/12">
         <h1 className="text-4xl font-bold antialiased text-slate-800 mb-6">
           Dashboard
         </h1>
