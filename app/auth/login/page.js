@@ -4,6 +4,7 @@ import Image from "next/image";
 import Input from "../../ui/Input";
 import { useState } from "react";
 import { LiaHandPeace } from "react-icons/lia";
+import { redirect } from "next/navigation";
 
 export default function Login() {
   const [username, setUsername] = useState(""); // username can be email or phone number
@@ -43,30 +44,34 @@ export default function Login() {
           <h1 className="text-2xl font-semibold text-gray-800">ورود</h1>
           <p className="text-gray-600 my-4 text-sm">
             <span className="flex items-center gap-0.5">
-              سلام <LiaHandPeace size={18} />
+              Hello <LiaHandPeace size={18} />
             </span>
-            برای ورود ایمیل خود یا شماره ی تلفن همراه را وارد کنید
+            Enter your personnel id and password for login
           </p>
 
           <form className="flex flex-col gap-4 w-full">
             <Input
               type="text"
-              placeholder="شماره پرسنلی خود را وارد کنید"
+              placeholder="Enter your phone number"
               onChange={handleUsernameChange}
               value={username}
             />
 
             <Input
               type="password"
-              placeholder="رمز خود را وارد کنید"
+              placeholder="Enter your password"
               onChange={handlePasswordChange}
               value={password}
             />
             <button
+              onClick={(e) => {
+                e.preventDefault();
+                redirect("/dashboard");
+              }}
               type="submit"
               className="bg-gray-900 rounded-md text-white text-xl py-2.5"
             >
-              ورود
+              Login
             </button>
           </form>
           {/*     <Link

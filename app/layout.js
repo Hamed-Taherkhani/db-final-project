@@ -1,19 +1,17 @@
-import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-
-const yekanFont = localFont({
-  src: "./YekanBakh-Medium.woff2",
-});
 
 export const metadata = {
   title: "Library management",
   description: "Manage library as easy as possible.",
 };
 
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500"] });
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="rtl">
-      <body className={yekanFont.className}>{children}</body>
+    <html lang="en">
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
