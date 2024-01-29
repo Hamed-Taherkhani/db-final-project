@@ -5,6 +5,7 @@ import Input from "../../ui/Input";
 import { useState } from "react";
 import { LiaHandPeace } from "react-icons/lia";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default function Login() {
   const [username, setUsername] = useState(""); // username can be email or phone number
@@ -20,7 +21,7 @@ export default function Login() {
   return (
     <div className="h-screen flex items-center">
       <Image
-        src="/images/bg.webp"
+        src="/images/bg.jpg"
         alt=""
         width={1920}
         height={1080}
@@ -30,7 +31,7 @@ export default function Login() {
       <div className="bg-white w-full max-h-full py-10 overflow-auto sm:w-8/12 md:w-7/12 lg:w-1/2 px-4 sm:px-8 lg:px-20">
         <div className="relative h-28 sm:h-20 flex justify-center items-center mb-4 sm:mb-0">
           <Image
-            src="/images/bg.webp"
+            src="/images/bg.jpg"
             alt=""
             width={400}
             height={200}
@@ -41,7 +42,7 @@ export default function Login() {
           </p>
         </div>
         <div>
-          <h1 className="text-2xl font-semibold text-gray-800">ورود</h1>
+          <h1 className="text-2xl font-semibold text-gray-800">Login</h1>
           <p className="text-gray-600 my-4 text-sm">
             <span className="flex items-center gap-0.5">
               Hello <LiaHandPeace size={18} />
@@ -63,24 +64,14 @@ export default function Login() {
               onChange={handlePasswordChange}
               value={password}
             />
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                redirect("/dashboard");
-              }}
+            <Link
+              href="/dashboard"
               type="submit"
-              className="bg-gray-900 rounded-md text-white text-xl py-2.5"
+              className="flex justify-center items-center bg-gray-900 rounded-md text-white text-xl py-2.5"
             >
               Login
-            </button>
+            </Link>
           </form>
-          {/*     <Link
-            href="register"
-            className="flex items-center gap-2 w-fit text-sm mt-2 sm:mt-4"
-          >
-            حساب کاربری ندارم!
-            <h2 className="text-blue-500 font-semibold">ثبت نام</h2>
-          </Link> */}
         </div>
       </div>
     </div>
